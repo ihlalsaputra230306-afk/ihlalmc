@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio MC - Ihlal Saputra</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f5f5f5; }
+    header { background:#0a0f33; color:white; padding:40px 20px; text-align:center; }
+    section { padding:40px 20px; max-width:900px; margin:auto; }
+    .card { background:white; padding:25px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-bottom:25px; }
+    h2 { color:#0a0f33; }
+    .prices table { width:100%; border-collapse:collapse; }
+    .prices th, .prices td { padding:12px; border-bottom:1px solid #ddd; text-align:left; }
+    footer { text-align:center; padding:20px; background:#0a0f33; color:white; margin-top:30px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="foto/logo1.png" alt="Logo MC" style="width:100px; margin-bottom:15px;" />
+    <h1>Ihlal Saputra</h1>
+    <p>Profesional Master of Ceremony</p>
+  </header>  <section>
+    <div class="card">
+      <h2>Awal Karir</h2>
+      <p>Ihlal Saputra lahir pada tahun 2006 dan mulai 
+        berkarir di dunia Entertaiment sebagai Master Of Ceremony pada tahun
+        2024, yang awal nya hanya penari dari sanggar seni permata lebak lalu
+        merangkap sebagai Mc, dengan pembawaan yang menarik dan elegan tentu
+        sebagai master of ceremony saya harus bisa membawa jalan nya acara dengan 
+        penuh cerita.</p>
+    </div><div class="card">
+  <h2>Portfolio Acara</h2>
+ <ul>
+    <li>Pernikahan (Wedding Ceremony)</li>
+    <p>Berpengalaman 1 tahun di wedding ceremony tentu
+      membuat saya harus banyak belajar dari pengalaman sebelumnya.
+      Telah melayani lebih dari 20 acara wedding pada 1 tahun terakhir ini.
+      Price list yang saya tawarkan telah setara dengan pengalaman yang saya 
+      miliki.
+    </p>
+  </ul>
+</div>
+    
+     <div class="card">
+      <h2><center>Sistem Pembayaran</center></h2>
+      <img src="foto/projek.png" alt="logo sistem" style="width:350px" />
+    </div>
+<div class="card prices">
+  <h2><center>Price List</center></h2>
+  <p>Harga di bawah belum termasuk transportasi, free transportasi maksimal 10km</p>
+  <img src="foto/plinpo.png" alt="logo pl" style="width:350px"/>
+</div>
+
+<div class="card" id="form-pesan">
+  <h2>Formulir Pemesanan</h2>
+  <form onsubmit="kirimWA(event)">
+    <label>Nama Pemesan:</label><br>
+    <input id="nama" type="text" style="width:100%; padding:10px; margin:8px 0;" /><br>
+
+    <label>No. WhatsApp:</label><br>
+    <input id="wa" type="text" style="width:100%; padding:10px; margin:8px 0;" /><br>
+
+    <label>Pilihan paket:</label><br>
+    <select id="acara" style="width:100%; padding:10px; margin:8px 0;">
+      <option>Paket A</option>
+      <option>Paket B</option>
+      <option>Paket C</option>
+    </select><br>
+
+    <label>Tanggal Acara:</label><br>
+    <input id="tanggal" type="date" style="width:100%; padding:10px; margin:8px 0;" /><br>
+
+    <label>Catatan Tambahan:</label><br>
+    <textarea id="catatan" style="width:100%; padding:10px; margin:8px 0;" rows="4"></textarea><br>
+
+    <button type="submit" style="padding:12px 20px; background:#0a0f33; color:white; border:none; border-radius:8px; cursor:pointer;">Kirim Pemesanan</button>
+  </form>
+
+  <script>
+    function kirimWA(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const wa = document.getElementById('wa').value;
+      const acara = document.getElementById('acara').value;
+      const tanggal = document.getElementById('tanggal').value;
+      const catatan = document.getElementById('catatan').value;
+      const nomorTujuan = '+6283193984732';
+      const pesan = `Halo, saya *${nama}*%0AIngin memesan jasa MC.%0A%0A*Jenis Acara:* ${acara}%0A*Tanggal:* ${tanggal}%0A*No. WhatsApp:* ${wa}%0A%0A*Catatan:* ${catatan}`;
+      window.open(`https://wa.me/${083193984732}?text=${pesan}`);
+    }
+  </script>
+</div>
+
+  </section>  <footer>
+    <p>&copy; 2025 Ihlal Saputra</p>
+  </footer>
+</body>
+</html>
